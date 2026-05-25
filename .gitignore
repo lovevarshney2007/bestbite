@@ -1,0 +1,31 @@
+# dependencies
+node_modules/
+
+# env files
+.env
+.env.*
+
+# logs
+logs
+*.log
+npm-debug.log*
+
+# prisma generated
+.prisma/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# editor
+.vscode/
+
+# build
+dist/
+build/
+
+# frontend
+frontend/dist/
+
+# misc
+coverage/
