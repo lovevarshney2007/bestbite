@@ -8,14 +8,17 @@ import { asyncHandler } from "./utils/asyncHandler.js"
 import router from "./routes/index.js";
 import logger from "./config/logger.js";
 import prisma from "./db/index.js";
+import cookieParser from "cookie-parser";
 
 dotenv.config();
 
 const app = express();
 
+
 app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
+app.use(cookieParser());
 
 app.use("/api/v1", router);
 
