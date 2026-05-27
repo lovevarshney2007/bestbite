@@ -13,12 +13,48 @@ datasource db {
 }
 
 model User {
-  id        String   @id @default(uuid())
-  name      String
-  email     String   @unique
-  password  String
-  role      String   @default("USER")
+  id           String   @id @default(uuid())
+  name         String
+  email        String   @unique
+  password     String
+  role         String   @default("USER")
   refreshToken String?
-  createdAt DateTime @default(now())
+  createdAt    DateTime @default(now())
 }
 
+model Platform {
+  id        String   @id @default(uuid())
+  name      String
+  logo      String?
+  createdAt DateTime @default(now())
+
+  restaurants Restaurant[]
+}
+
+model Restaurant {
+  id        String   @id @default(uuid())
+  name      String
+  image     String?
+  location  String
+  createdAt DateTime @default(now())
+
+  platformId String
+  platform   Platform @relation(fields: [platformId], references: [id])
+
+  @@unique([name, platformId])
+
+  menus Menu[]
+}
+
+model Menu {
+  id          String   @id @default(uuid())
+  itemName    String
+  price       Float
+  description String?
+  createdAt   DateTime @default(now())
+
+  restaurantId String
+  restaurant   Restaurant @relation(fields: [restaurantId], references: [id])
+
+  @@unique([itemName, restaurantId])
+}
