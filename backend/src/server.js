@@ -2,9 +2,14 @@ import express from "express";
 import cors from "cors";
 import morgan from "morgan";
 import dotenv from "dotenv";
+
+import redis from "./queue/redis.js";
+import "./jobs/fetchMenu.job.js";
+
 import { errorHandler } from "./middleware/error.middleware.js"
 import { ApiError } from "./utils/ApiError.js"
 import { asyncHandler } from "./utils/asyncHandler.js"
+
 import router from "./routes/index.js";
 import logger from "./config/logger.js";
 import prisma from "./db/index.js";

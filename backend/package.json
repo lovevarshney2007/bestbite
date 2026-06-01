@@ -14,15 +14,21 @@
   "dependencies": {
     "@prisma/client": "^6.19.3",
     "bcryptjs": "^3.0.3",
+    "bullmq": "^5.77.6",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "express-validator": "^7.3.2",
+    "ioredis": "^5.11.0",
     "jsonwebtoken": "^9.0.3",
     "morgan": "^1.10.1",
+    "node-cron": "^4.2.1",
     "pg": "^8.21.0",
-    "prisma": "^6.19.3"
+    "playwright": "^1.60.0",
+    "playwright-extra": "^4.3.6",
+    "prisma": "^6.19.3",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"

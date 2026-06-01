@@ -1,31 +1,20 @@
-# dependencies
+# node
 node_modules/
 
-# env files
+# env
 .env
-.env.*
 
 # logs
 logs
 *.log
-npm-debug.log*
 
-# prisma generated
-.prisma/
+# prisma
+prisma/dev.db
 
-# OS files
+# playwright / scraper debug
+backend/browser-data/
+backend/*.png
+
+# OS
 .DS_Store
 Thumbs.db
-
-# editor
-.vscode/
-
-# build
-dist/
-build/
-
-# frontend
-frontend/dist/
-
-# misc
-coverage/

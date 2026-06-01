@@ -7,6 +7,8 @@ import platformRouter from "./platformRoutes.js";
 import restaurantRouter from "./restaurantRoutes.js";
 import menuRouter from "./menuRoutes.js";
 import compareRouter from "./compareRoutes.js";
+import workerRouter
+from "./workerRoutes.js";
 
 const router = Router();
 
@@ -18,5 +20,9 @@ router.use("/users",userRouter);
 router.use("/platforms", platformRouter);
 router.use("/menus", menuRouter);
 router.use("/compare", compareRouter);
+router.use(
+    "/worker",
+    workerRouter
+);
 
 export default router;

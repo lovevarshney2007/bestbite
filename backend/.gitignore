@@ -1,5 +1,20 @@
-node_modules
-# Keep environment variables out of version control
+# node
+node_modules/
+
+# env
 .env
 
-/src/generated/prisma
+# logs
+logs
+*.log
+
+# prisma
+prisma/dev.db
+
+# playwright / scraper debug
+backend/browser-data/
+backend/*.png
+
+# OS
+.DS_Store
+Thumbs.db
